@@ -1,0 +1,30 @@
+var countriesWithAliases = [
+  [1, 'Adrenal Haemorrhage'],
+  [2, 'Cavernous Haemangioma (CNS)'],
+  [3, 'Cerebral Arteriopathy with Subcortical Infarcts'],
+  [4, 'Cerebral Embolism'],
+  [5, 'Cerebral Infarction'], 
+  [6, 'Cerebral Ischaemia'], 
+  [7, 'Cerebral Occlusive Disease'], 
+  [8, 'Cerebral Small Vessel Disease'], 
+  [9, 'Cerebral Thrombosis'], 
+  [10, 'Cerebral Vasculitis'], 
+  [11, 'Cerebral Venous Thrombosis'], 
+  [12, 'Cerebrovascular Accident (Thrombotic)'], 
+  [13, 'Drop Attack'], 
+  [14, 'Migrainous Stroke'], 
+  [15, 'Multiple Cerebral Infarcts'], 
+  [16, 'PICA Stroke'], 
+  [17, 'Pontine Infarction'], 
+  [18, 'Posterior Cerebral Circulatory Infarction'], 
+  [19, 'Prolonged Reversible Ischaemic Neurological Deficiency'], 
+  [20, 'Spinal Infarction'], 
+  [21, 'Stroke (Thrombotic)'], 
+  [22, 'Sturge-Weber Syndrome'], 
+  [23, 'Suspected TIA'], 
+  [24, 'Transient Global Amnesia'], 
+  [25, 'Transient Ischaemic Attack'], 
+];
+
+
+//var countriesWithAliases=[[16,"Australia",["Melbourne","Tasmania"]],[79,"United Kingdom",["Great Britain","London","UnitedKingdom","U.K.","GBR","UK","England","Wales","Scotland","Northern Ireland"]],[232,"United States",["U.S.","America","UnitedStates","USA","U.S.A.","US","Hawaii","Los Angeles"]],[216,"Thailand",["Bangkok","Phuket"]],[157,"Malaysia"],[194,"Singapore"],[40,"Canada"],[75,"France"],[170,"New Zealand",["NZ","Newzealand"]],[96,"Hong Kong",["HK","Hongkong","H.K."]],[111,"Italy"],[73,"Fiji"],[247,"Bali"],[59,"Germany"],[239,"Vietnam"],[49,"Cook Islands",["Rarotonga"]],[104,"India"],[69,"Spain"],[176,"Philippines"],[44,"China"],[115,"Japan"],[166,"Netherlands",["Amsterdam","Holland","The Netherlands"]],[119,"Cambodia"],[244,"South Africa"],[106,"Ireland"],[54,"Cuba"],[242,"Samoa",["Western Samoa"]],[9,"United Arab Emirates",["UAE","Dubai"]],[102,"Indonesia"],[89,"Greece"],[10,"Argentina"],[240,"Vanuatu"],[17,"Austria"],[160,"New Caledonia",["Noumea"]],[209,"Sweden"],[175,"Peru"],[33,"Brazil"],[124,"Laos"],[62,"Denmark"],[42,"Switzerland"],[43,"Chile"],[182,"Portugal"],[99,"Croatia"],[224,"Turkey"],[20,"Belgium"],[189,"Russia"],[142,"Mexico"],[35,"Brunei"],[122,"South Korea"],[117,"Kenya"],[135,"Macao",["Macau"]],[221,"Tonga"],[248,"Tahiti"],[179,"Poland"],[32,"Bolivia"],[58,"Czech Republic"],[207,"Slovakia"],[110,"Israel"],[130,"Sri Lanka",["SriLanka"]],[101,"Hungary"],[50,"Colombia"],[227,"Tanzania"],[66,"Egypt"],[188,"Romania"],[246,"Zimbabwe"],[64,"Algeria"],[172,"Pakistan"],[226,"Taiwan"],[204,"Serbia"],[38,"Botswana"],[168,"Nepal"],[140,"Madagascar"],[162,"Norfolk Island"],[27,"Bosnia and Herzegovina"],[92,"Guatemala"],[144,"Macedonia"],[31,"Bermuda"],[24,"Bulgaria"],[137,"Morocco"],[6,"Albania"],[100,"Haiti"],[53,"Costa Rica"],[109,"Iceland"],[191,"Saudi Arabia"],[167,"Norway"],[164,"Nicaragua"],[236,"Venezuela"],[171,"Oman"],[26,"The Bahamas"],[148,"Montenegro"],[222,"Trinidad and Tobago"],[11,"Armenia"],[30,"Belize"],[2,"Afghanistan"],[5,"Aland Islands"],[12,"American Samoa"],[7,"Andorra"],[3,"Angola"],[4,"Anguilla"],[13,"Antarctica"],[15,"Antigua and Barbuda"],[1,"Aruba"],[18,"Azerbaijan"],[25,"Bahrain"],[23,"Bangladesh"],[34,"Barbados"],[29,"Belarus"],[21,"Benin"],[36,"Bhutan"],[37,"Bouvet Island"],[105,"British Indian Ocean Territory"],[237,"British Virgin Islands"],[22,"Burkina Faso"],[147,"Myanmar",["Burma"]],[19,"Burundi"],[46,"Cameroon"],[52,"Cape Verde"],[56,"Cayman Islands"],[39,"Central African Republic"],[214,"Chad"],[55,"Christmas Island"],[41,"Cocos (Keeling) Islands"],[51,"Comoros"],[48,"Congo"],[45,"Cote d'Ivoire",["Ivory Coast"]],[57,"Cyprus"],[47,"Democratic Republic of the Congo"],[60,"Djibouti"],[61,"Dominica"],[63,"Dominican Republic"],[220,"East Timor",["Timor-Leste"]],[65,"Ecuador"],[200,"El Salvador"],[88,"Equatorial Guinea"],[67,"Eritrea"],[70,"Estonia"],[71,"Ethiopia"],[74,"Falkland Islands ",["Malvinas"]],[76,"Faroe Islands"],[72,"Finland"],[93,"French Guiana"],[185,"French Polynesia"],[14,"French Southern Territories"],[78,"Gabon"],[86,"Gambia"],[80,"Georgia"],[82,"Ghana"],[83,"Gibraltar"],[91,"Greenland"],[90,"Grenada"],[85,"Guadeloupe"],[94,"Guam"],[81,"Guernsey"],[84,"Guinea"],[87,"Guinea-Bissau"],[95,"Guyana"],[97,"Heard Island and McDonald Islands"],[234,"Holy See (Vatican City State)"],[98,"Honduras"],[107,"Iran"],[108,"Iraq"],[103,"Isle of Man"],[112,"Jamaica"],[113,"Jersey"],[114,"Jordan"],[116,"Kazakhstan"],[120,"Kiribati"],[123,"Kuwait"],[118,"Kyrgyzstan"],[134,"Latvia"],[125,"Lebanon"],[131,"Lesotho"],[126,"Liberia"],[127,"Libya"],[129,"Liechtenstein"],[132,"Lithuania"],[133,"Luxembourg"],[156,"Malawi"],[141,"Maldives"],[145,"Mali"],[146,"Malta"],[143,"Marshall Islands"],[154,"Martinique"],[152,"Mauritania"],[155,"Mauritius"],[158,"Mayotte"],[77,"Micronesia"],[139,"Moldova"],[138,"Monaco"],[149,"Mongolia"],[153,"Montserrat"],[151,"Mozambique"],[159,"Namibia"],[169,"Nauru"],[8,"Netherlands Antilles",["Netherlands Antillean"]],[161,"Niger"],[163,"Nigeria"],[165,"Niue"],[181,"North Korea"],[150,"Northern Mariana Islands"],[178,"Papua New Guinea",["PNG","P.N.G."]],[177,"Palau"],[184,"Palestinian Territory, Occupied"],[173,"Panama"],[183,"Paraguay"],[174,"Pitcairn"],[180,"Puerto Rico"],[186,"Qatar"],[187,"Reunion"],[190,"Rwanda"],[28,"Saint Barthelemy"],[196,"Saint Helena, Ascension and Tristan da Cunha"],[121,"Saint Kitts and Nevis",["St Kitts and Nevis"]],[128,"Saint Lucia"],[136,"Saint Martin (French part)"],[203,"Saint Pierre and Miquelon"],[235,"Saint Vincent and the Grenadines"],[201,"San Marino"],[205,"Sao Tome and Principe"],[193,"Senegal"],[211,"Seychelles"],[199,"Sierra Leone"],[208,"Slovenia"],[198,"Solomon Islands"],[202,"Somalia"],[195,"South Georgia and the South Sandwich Islands"],[192,"Sudan"],[206,"Suriname"],[197,"Svalbard and Jan Mayen"],[210,"Swaziland"],[212,"Syria"],[217,"Tajikistan"],[215,"Togo"],[218,"Tokelau"],[223,"Tunisia"],[219,"Turkmenistan"],[213,"Turks and Caicos Islands"],[225,"Tuvalu"],[228,"Uganda"],[229,"Ukraine"],[230,"United States Minor Outlying Islands"],[231,"Uruguay"],[238,"US Virgin Islands"],[233,"Uzbekistan"],[241,"Wallis and Futuna"],[68,"Western Sahara"],[249,"Worldwide"],[243,"Yemen"],[245,"Zambia"]];

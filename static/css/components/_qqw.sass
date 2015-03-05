@@ -1,0 +1,27 @@
+// Quick Quote Widget
+
+#quote-panel
+  
+  h1, h2, h3, h4, h5, p, label, a
+    color: $color-white
+    
+  a
+    &.children-go-free
+      margin-bottom: rem-calc(16)
+      display: block
+    
+  a:hover
+    text-decoration: underline
+  
+  hr
+    border: solid $color-white
+    border-width: 1px 0 0
+    margin: rem-calc(8) 0 rem-calc(8)
+    
+
+  @media #{$medium-up}
+    .age-input
+      padding-right: 0
+      margin-bottom: rem-calc(8)
+      width: 48%
+      display: inline-block

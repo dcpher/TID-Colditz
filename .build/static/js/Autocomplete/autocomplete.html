@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Autocomplete demo</title>
+    <script src="../jquery.js"></script>
+    <script src="./jquery.autocomplete.js"></script>
+    <script src="./jquery.autocompleteWithPanel.js"></script>
+    <script src="./countries.js"></script>
+    <script src="./uber_countries.js"></script>
+    
+    <script>
+      $(function() {
+        $('.destination').autocompleteWithPanel(countriesWithAliases, regions_for_panel, {
+          anchorTo: $('#anchor-to')
+        });
+        
+        var things = ["Misc", "Oobellyboo", "Other"];
+        
+        $('.plain-autocompleter').autocomplete(things, {
+          anchorTo: $('#anchor-to')
+        });
+      });
+    </script>
+    
+    <style>
+      input { border-color: #8EA0A4 #B5CBD1 #B5CBD1 #8EA0A4; border-width: 1px; border-style: solid; box-shadow: 0.5px 0.5px 2px #999999 inset; font-size: 13px; font-family: helvetica; padding: 6px 5px; width: 300px; }
+    
+      .autocomplete { margin: 0; padding: 0; border: 1px solid #21C5E7; font-size: 16px; font-family: helvetica;}
+      .autocomplete li { list-style: none; color: #555; padding: 5px 8px;}
+      .autocomplete li em { font-style: normal; font-weight: bold; }
+      .autocomplete li.odd { background-color: #E9F4F7; }
+      .autocomplete li.even { background-color: white; }
+      .autocomplete li.selected { background-color: #21C5E7; color: white; }
+      
+      #destinations { font-family: helvetica; }
+      #destinations li { font-size: 14px; }
+      #destinations li a { padding-left: 8px; color: #dd1111; cursor: pointer; }
+      
+      #countryPanel { width: 620px; overflow: hidden; font-family: helvetica; background-color: #E1F4FA; border: 1px solid #86B9C4; border-radius: 5px;  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
+      #countryPanel h3 { background-color: #C9EDF8; font-size: 15px; border-radius: 5px;  padding: 7px 10px 5px; color: #003366; margin: 0; }
+      #countryPanel .regions { padding: 10px; }
+      #countryPanel .regions dl.region { float: left; width: 150px; margin: 0 0 20px; }
+      #countryPanel .regions dl.region dt { font-size: 13px; font-weight: bold; color: #003366; margin-bottom: 7px;  }
+      #countryPanel .regions dl.region dd { margin: 0; font-size: 12px; line-height: 16px; }
+      #countryPanel .regions dl.region dd a { color: #DD1111; cursor: pointer; }
+      
+    </style>
+  </head>
+  <body>
+    <form class='quoteForm'>
+      <div class='selectDestination'>
+        <input class='destination' /><input class='plain-autocompleter' />
+      </div>
+    </form>
+    
+    <div style='margin-top: 30px'>
+      
+    </div>
+    <div id='anchor-to' style='background-color: #EEE; width: 300px; height: 100px; margin: 50px;'>
+  </body>
+</html>

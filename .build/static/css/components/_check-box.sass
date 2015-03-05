@@ -1,0 +1,40 @@
+//check-box styles
+
+.content-panel
+  .checkbox, .checkbox-input
+    display: inline-block
+      
+  .checkbox-input
+    width: 80%
+
+  .checkbox
+    input[type="checkbox"]
+      display: none
+      
+  .checkbox label:before
+    +border-radius(3px)
+    font: normal normal normal 16px/1 FontAwesome
+    color: $color-light-grey
+    background-color: darken($color-light-grey,10%)
+    content: "\F00C"  
+    display: inline-block  
+    margin-right: 8px
+    width: 24px
+    height: 24px
+    padding-top: 4px
+    text-align: center
+      
+  .checkbox label:before:hover
+    color: darken($color-light-grey,35%)
+    
+  input[type="checkbox"]:checked + label:before
+    color: $color-white
+    background-color: $color-green
+    
+  &.options
+    &.content
+      .column
+        .checkbox
+          border: none !important
+          padding-left: 0 !important
+
