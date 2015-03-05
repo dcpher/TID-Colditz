@@ -622,7 +622,7 @@ $global-radius: 4px;
 // $include-html-form-classes: $include-html-classes;
 
 // We use this to set the base for lots of form spacing and positioning styles
-$form-spacing: rem-calc(20);
+$form-spacing: rem-calc(16);
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
@@ -651,7 +651,7 @@ $input-border-radius: $global-radius;
 // $fieldset-border-style: solid;
 // $fieldset-border-width: 1px;
 // $fieldset-border-color: $gainsboro;
-// $fieldset-padding: rem-calc(20);
+$fieldset-padding: rem-calc(20);
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them

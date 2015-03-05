@@ -1,8 +1,25 @@
 // Extentd Button Styles
-.button
+.button, input[type="submit"].button
   +border-radius(4px)
+  font-size: rem-calc(20)
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)
   cursor: pointer
+  position: relative
+  padding: rem-calc(8) rem-calc(16)
+  padding-right: rem-calc(44)
+  text-align: left
+  
+  &:after
+    content: '\203A'
+    font-weight: bold
+    font-size: 24px
+    position: absolute
+    top: 4px
+    right: 16px
+  
+  &:hover
+    text-decoration: none
+  
 
   // TID Button colours
   
@@ -103,3 +120,8 @@
     color: $color-dark-grey
     &:hover 
       +gradient-button(darken($color-light-grey, 10%))
+      
+a
+  &.button:hover
+    text-decoration: none
+    
