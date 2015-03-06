@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
 	<link rel="shortcut icon" href="static/images/favicon.png">
 	<link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -15,44 +15,47 @@
 </head>
 <body>
   
-  <div class="header blue-panel">
-    <div class="row">
-      <div class="small-12 columns">
-            Navigation to go here?
-      </div>
-    </div>
-  </div>
+  <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#"><img class="logo x2" src="static/images/tid-logo.png" /></a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class=""><a href="#">What we cover</a></li>
+      <li class=""><a href="#">Help &amp; Emergencies</a></li>
+      <li class=""><a href="#">How to claim</a></li>
+      <li class=""><a href="#">Customer Service</a></li>
+      <li class=""><a href="#">1300 843 843</a></li>
+      <li class="sign-in"><a href="#">Sign in</a></li>
+    </ul>
+  </section>
+</nav>
   
 	
 
-
-<!--
-<div class="header-content">
-  <div class="row" id="header">
-    <div class="small-12 medium-4 large-4 column"><img src="http://placehold.it/350x100">
-    <p></p>
-    </div>
-
-    <div class="small-12 medium-8 large-8 column text-right">
-      <p>Existing customer? <a href="#">Log in</a></p>
-
-      <ul class="inline-list right">
-        <li>
-          <a href="#">Customer Service</a>
-        </li>
-
-        <li>1300 843 843</li>
-      </ul>
+<article class="content-item tid-au-destinations">
+<div class="header-panel blue-panel" id="header">
+  <div class="row">
+    <div class="small-12 column">
+      
+      <h1>Travel Insurance for Bali</h1>
+      
+      <p>Bali is a wonderful&nbsp;travel destination. Summer or winter, business or holiday, Bali offers a fantastic travel experience.&nbsp;</p>
     </div>
   </div>
 </div>
--->
-<article class="content-item tid-au-destinations">
+
 <div class="content-panel content">
   <div class="row header">
     <div class="small-12 medium-9 large-8 column">
       
-        <h1>Travel Insurance for Bali</h1><span class="value"></span>
+        
 
         
         <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
@@ -62,7 +65,7 @@
         "http://www.travelinsurancedirect.com.au//Media/Default/JPGs/TID-bali3.jpg"></li>
         </ul>
 
-        <p>Bali is a wonderful&nbsp;travel destination. Summer or winter, business or holiday, Bali offers a fantastic travel experience.&nbsp;</p>
+        
 
         <p>It's one of the most popular overseas holiday spots for Australians - it's cheap to get there and the warm temperatures, wide variety of accommodation, well-priced food
         and shopping make it a very desirable destination.&nbsp;</p>
@@ -222,8 +225,14 @@
 
 
 	
-		
+		<script src="/static/js/jquery.min.js"></script>
 		<script src="/static/js/main.js"></script>
+		<script src="/static/js/foundation/foundation.js"></script>
+		<script src="/static/js/foundation/foundation.topbar.js"></script>
+  
+        <script>
+          $(document).foundation();
+        </script>
 	
 </body>
 </html>
