@@ -4008,6 +4008,8 @@ a.button:hover {
   display: block; }
 #quote-panel a.button {
   text-decoration: none; }
+#quote-panel label {
+  font-weight: 500; }
 #quote-panel hr {
   border: solid #FFF;
   border-width: 1px 0 0;
