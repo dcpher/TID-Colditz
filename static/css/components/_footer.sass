@@ -1,0 +1,43 @@
+// footer
+
+#footer
+  margin-bottom: 0
+
+  .follow-us-on
+    margin-top: rem-calc(28)
+
+
+    li
+      margin-left: rem-calc(8)
+      a
+        +border-radius(20px)
+        width: rem-calc(40)
+        height: rem-calc(40)
+        text-align: center
+        background-color: darken($color-light-grey, 15)
+        color: $color-light-grey
+        padding-top: rem-calc(8)
+        font-size: rem-calc(24)
+
+        &:hover
+          background-color: $color-blue
+
+  .footer-links
+    margin-top: rem-calc(32)
+    margin-bottom: rem-calc(32)
+    ul
+      li
+        font-size: rem-calc(16)
+        &.title
+          color: $color-dark-grey
+          font-size: rem-calc(22)
+          padding-bottom: rem-calc(8)
+        a
+          &:hover
+            text-decoration: underline
+
+
+  .legal
+    font-size: rem-calc(12)
+    font-weight: 500
+    color: lighten($color-dark-grey, 35%)
