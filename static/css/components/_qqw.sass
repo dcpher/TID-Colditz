@@ -1,49 +1,5 @@
 // Quick Quote Widget
-
-#quote-panel
-  
-  @media #{$medium-up}
-    .column .column:first-child
-      padding-right: rem-calc(8)
-    .column .column:last-child
-      padding-left: rem-calc(8)
-  
-  h1, h2, h3, h4, h5, p, label, a
-    color: $color-white
-    
-  h4
-    color: $color-dark-blue
-
-  a:hover
-    text-decoration: underline
-    
-  a
-    &.children-go-free
-      margin-bottom: rem-calc(16)
-      display: block
-      
-    &.button
-      text-decoration: none
-  
-  label
-    font-weight: 500
-    
-
-  hr
-    border: solid $color-white
-    border-width: 1px 0 0
-    margin: rem-calc(8) 0 rem-calc(8)
-    
-  .age-input
-    margin-bottom: rem-calc(8)
-    
-  .button
-    margin-bottom: 0
-    //padding: rem-calc(8) rem-calc(16)
-    //text-align: left
-    
-    
-    
+ 
     
 // Full Width QQWidget
 .qqw-full-width
@@ -72,13 +28,19 @@
         @include grid-row($behavior: nest)
         .sub-group
           @include grid-column(6)
+
         @media #{$medium-up}
           .sub-group:first-child
             padding-right: rem-calc(8)
           .sub-group:last-child
             padding-left: rem-calc(8)
           .chikdren-go-free
-            margin-bottom: rem-calc(16)    
+            margin-bottom: rem-calc(16)
+            
+
+      
+            
+            
           
 // Contained QQWidget
 .qqw-contained  
@@ -147,12 +109,12 @@
     border-radius: 3px
     box-shadow: #ccc 0px 1px 1px 0px inset
     box-sizing: border-box
+    height: rem-calc(44)
   
   .travelling-as
     //width: 30%
     input[type='text']
-      //max-width: 90px
-      //margin-right: rem-calc(8)
+      margin-bottom: 4px
     .sub-group
       float: left
     
@@ -180,5 +142,5 @@
       +gradient-button(darken($color-dark-blue, 10%))
       
     @media #{$medium-up}
-      margin-top: rem-calc(48)
+      //margin-top: rem-calc(48)
 

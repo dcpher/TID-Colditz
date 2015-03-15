@@ -3452,6 +3452,9 @@ h3, h4, #quick-quote h3 {
   letter-spacing: -0.0625rem;
   margin-bottom: 0.5rem; }
 
+h5 {
+  font-weight: 500; }
+
 h1.blue, h2.blue, h3.blue, h4.blue, #quick-quote h3.blue, h5.blue, div.blue, p.blue, span.blue {
   color: #00bae4; }
 h1.dark-blue, h2.dark-blue, h3.dark-blue, h4.dark-blue, #quick-quote h3.dark-blue, h5.dark-blue, div.dark-blue, p.dark-blue, span.dark-blue {
@@ -3732,33 +3735,6 @@ h1.white, h2.white, h3.white, h4.white, #quick-quote h3.white, h5.white, div.whi
 a.button:hover, #quick-quote a.continue:hover {
   text-decoration: none; }
 
-@media only screen and (min-width: 40.063em) {
-  #quote-panel .column .column:first-child {
-    padding-right: 0.5rem; }
-  #quote-panel .column .column:last-child {
-    padding-left: 0.5rem; } }
-#quote-panel h1, #quote-panel h2, #quote-panel h3, #quote-panel h4, #quote-panel #quick-quote h3, #quick-quote #quote-panel h3, #quote-panel h5, #quote-panel p, #quote-panel label, #quote-panel a {
-  color: #FFF; }
-#quote-panel h4, #quote-panel #quick-quote h3, #quick-quote #quote-panel h3 {
-  color: #005581; }
-#quote-panel a:hover {
-  text-decoration: underline; }
-#quote-panel a.children-go-free {
-  margin-bottom: 1rem;
-  display: block; }
-#quote-panel a.button, #quote-panel #quick-quote a.continue, #quick-quote #quote-panel a.continue {
-  text-decoration: none; }
-#quote-panel label {
-  font-weight: 500; }
-#quote-panel hr {
-  border: solid #FFF;
-  border-width: 1px 0 0;
-  margin: 0.5rem 0 0.5rem; }
-#quote-panel .age-input {
-  margin-bottom: 0.5rem; }
-#quote-panel .button, #quote-panel #quick-quote .continue, #quick-quote #quote-panel .continue {
-  margin-bottom: 0; }
-
 .qqw-full-width #quick-quote .destination.alpha {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -3919,7 +3895,10 @@ a.button:hover, #quick-quote a.continue:hover {
     border-right: 1px solid #34d2ff;
     border-radius: 3px;
     box-shadow: #ccc 0px 1px 1px 0px inset;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    height: 2.75rem; }
+  #quick-quote .travelling-as input[type='text'] {
+    margin-bottom: 4px; }
   #quick-quote .travelling-as .sub-group {
     float: left; }
   #quick-quote .travelling-as .children-go-free {
@@ -3948,9 +3927,6 @@ a.button:hover, #quick-quote a.continue:hover {
       background: -o-linear-gradient(top, #003d5d 0%, #00293f 100%);
       background: -ms-linear-gradient(top, #003d5d 0%, #00293f 100%);
       background: linear-gradient(to bottom, #003d5d 0%, #00293f 100%); }
-    @media only screen and (min-width: 40.063em) {
-      #quick-quote .continue {
-        margin-top: 3rem; } }
 
 .blue-panel {
   border-style: solid;
@@ -4239,9 +4215,35 @@ a.button:hover, #quick-quote a.continue:hover {
       font-size: 2rem;
       line-height: 1.1;
       letter-spacing: -0.0625rem; }
+  @media only screen and (max-width: 40em) {
+    #header.header-panel {
+      padding-top: 0;
+      padding-bottom: 2rem; }
+      #header.header-panel .title:first-child {
+        background-color: #005581;
+        margin: 0;
+        padding: 5% 2.5%;
+        width: 100%;
+        margin-bottom: 2rem; }
+      #header.header-panel h1 {
+        font-size: 1.75rem;
+        letter-spacing: -1px;
+        margin-bottom: 0; }
+      #header.header-panel h1:after {
+        content: "Get a quote";
+        color: #00bae4;
+        display: block; } }
 
 .content-panel {
-  padding-top: 2rem; }
+  padding-top: 1.5rem; }
+  .content-panel .row {
+    padding: 1rem 0; }
+    @media only screen and (min-width: 64.063em) {
+      .content-panel .row .middle {
+        position: relative;
+        -webkit-transform: translateY(40%);
+        -ms-transform: translateY(40%);
+        transform: translateY(40%); } }
 
 nav .logo {
   height: 40px;
@@ -4258,13 +4260,46 @@ nav .top-bar-section ul li.sign-in a {
     background-color: #00aed5; }
   .benefits-bar .columns, .benefits-bar .column {
     color: #FFF; }
+  .benefits-bar ul li {
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    padding-left: 3.5rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0;
+    line-height: 1.1;
+    min-height: 44px; }
+    .benefits-bar ul li.trusted {
+      background-image: url("/static/images/icons/icon_trust_1mil.png"); }
+    .benefits-bar ul li.award {
+      background-image: url("/static/images/icons/icon_trust_awards.png"); }
+    .benefits-bar ul li.owned {
+      background-image: url("/static/images/icons/icon_trust_ozzie.png"); }
+    .benefits-bar ul li.secure {
+      background-image: url("/static/images/icons/icon_trust_secure.png"); }
+    .benefits-bar ul li.lloyds {
+      background-size: contain;
+      background-position: right;
+      padding-left: 0;
+      background-image: url("/static/images/icons/icon_trust_lloyds.png"); }
+    @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+      .benefits-bar ul li.trusted {
+        background-image: url("/static/images/icons/icon_trust_1mil@x2.png"); }
+      .benefits-bar ul li.award {
+        background-image: url("/static/images/icons/icon_trust_awards@x2.png"); }
+      .benefits-bar ul li.owned {
+        background-image: url("/static/images/icons/icon_trust_ozzie@x2.png"); }
+      .benefits-bar ul li.secure {
+        background-image: url("/static/images/icons/icon_trust_secure@x2.png"); }
+      .benefits-bar ul li.lloyds {
+        background-image: url("/static/images/icons/icon_trust_lloyds@x2.png"); } }
 
 .text-with-img {
   margin-bottom: 1.5rem;
   background-repeat: no-repeat;
   background-size: 66px 82px; }
   .text-with-img h4, .text-with-img #quick-quote h3, #quick-quote .text-with-img h3, .text-with-img h5, .text-with-img p, .text-with-img span {
-    padding-left: 80px; }
+    padding-left: 80px;
+    padding-right: 1rem; }
   .text-with-img p {
     margin-bottom: 0.25rem; }
   .text-with-img a.white {
@@ -4303,6 +4338,18 @@ nav .top-bar-section ul li.sign-in a {
     .text-with-img.passport-lost {
       background-image: url("/static/images/icons/benefits_6_b@x2.png"); } }
 
+@media only screen and (max-width: 40em) {
+  .text-with-img {
+    margin-bottom: 1rem;
+    background-repeat: no-repeat;
+    background-size: 33px 42px;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 0.625rem; }
+    .text-with-img h4, .text-with-img #quick-quote h3, #quick-quote .text-with-img h3, .text-with-img h5, .text-with-img p, .text-with-img span {
+      padding-left: 40px;
+      padding-right: 1rem; }
+    .text-with-img p {
+      margin-bottom: 0.25rem; } }
 #footer {
   margin-bottom: 0; }
   #footer .follow-us-on {
